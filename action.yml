@@ -4,16 +4,22 @@ author: 'Thomas McNiven'
 inputs:
   extension:
     description: 'ID of the extension that you are updating'
+    required: true
   zip:
     description: 'Path to a .zip of your addon'
+    required: true
   client-id:
     description: 'Google OAuth2 client id'
+    required: true
   client-secret:
     description: 'Google OAuth2 client secret'
+    required: false
   refresh-token:
     description: 'Google OAuth2 refresh token'
+    required: true
   publish-target:
-    description: 'Chrome Stroe publish target "default" | "trustedTesters"'
+    required: false
+    description: 'Chrome Store publish target "default" | "trustedTesters"'
     default: 'default'
 runs:
   using: 'node12'
